@@ -1,0 +1,52 @@
+```xml
+<odoo>
+    <data>
+        <record id="view_component_customization_form" model="ir.ui.view">
+            <field name="name">component.customization.form</field>
+            <field name="model">component.customization</field>
+            <field name="arch" type="xml">
+                <form string="Component Customization">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="color"/>
+                            <field name="size"/>
+                            <field name="other_aesthetic_features"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_component_customization_tree" model="ir.ui.view">
+            <field name="name">component.customization.tree</field>
+            <field name="model">component.customization</field>
+            <field name="arch" type="xml">
+                <tree string="Component Customization">
+                    <field name="name"/>
+                    <field name="color"/>
+                    <field name="size"/>
+                    <field name="other_aesthetic_features"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_component_customization" model="ir.actions.act_window">
+            <field name="name">Component Customization</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">component.customization</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new Component Customization
+                </p>
+                <p>
+                    Here you can customize the components for your PC build.
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="menu_component_customization" name="Component Customization" parent="custom_pc_builder.menu_custom_pc_builder" sequence="3" action="action_component_customization"/>
+    </data>
+</odoo>
+```

@@ -1,0 +1,47 @@
+```xml
+<odoo>
+    <data>
+        <record id="view_build_sharing_form" model="ir.ui.view">
+            <field name="name">build.sharing.form</field>
+            <field name="model">build.sharing</field>
+            <field name="arch" type="xml">
+                <form string="Build Sharing">
+                    <sheet>
+                        <group>
+                            <field name="user_id"/>
+                            <field name="build_id"/>
+                            <field name="shared_with"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_build_sharing_tree" model="ir.ui.view">
+            <field name="name">build.sharing.tree</field>
+            <field name="model">build.sharing</field>
+            <field name="arch" type="xml">
+                <tree string="Build Sharing">
+                    <field name="user_id"/>
+                    <field name="build_id"/>
+                    <field name="shared_with"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_build_sharing" model="ir.actions.act_window">
+            <field name="name">Build Sharing</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">build.sharing</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Share your PC builds with others here.
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="menu_build_sharing" name="Build Sharing" parent="custom_pc_builder.menu_custom_pc_builder" action="action_build_sharing"/>
+    </data>
+</odoo>
+```

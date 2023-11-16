@@ -1,0 +1,69 @@
+```xml
+<odoo>
+    <data>
+        <!-- Build Form View -->
+        <record id="view_build_form" model="ir.ui.view">
+            <field name="name">build.form</field>
+            <field name="model">custom.pc.builder.build</field>
+            <field name="arch" type="xml">
+                <form string="Build">
+                    <sheet>
+                        <group>
+                            <field name="user_id"/>
+                            <field name="components"/>
+                            <field name="configuration"/>
+                            <field name="customization"/>
+                            <field name="price"/>
+                        </group>
+                        <notebook>
+                            <page string="Build History">
+                                <field name="build_history"/>
+                            </page>
+                            <page string="Build Recommendations">
+                                <field name="build_recommendations"/>
+                            </page>
+                            <page string="Build Sharing">
+                                <field name="build_sharing"/>
+                            </page>
+                            <page string="Build Import/Export">
+                                <field name="build_import_export"/>
+                            </page>
+                            <page string="Build Analytics">
+                                <field name="build_analytics"/>
+                            </page>
+                            <page string="Build Support">
+                                <field name="build_support"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Build Tree View -->
+        <record id="view_build_tree" model="ir.ui.view">
+            <field name="name">build.tree</field>
+            <field name="model">custom.pc.builder.build</field>
+            <field name="arch" type="xml">
+                <tree string="Build">
+                    <field name="user_id"/>
+                    <field name="components"/>
+                    <field name="configuration"/>
+                    <field name="customization"/>
+                    <field name="price"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Build Action -->
+        <record id="action_build" model="ir.actions.act_window">
+            <field name="name">Builds</field>
+            <field name="res_model">custom.pc.builder.build</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Build Menu -->
+        <menuitem id="menu_build" name="Builds" parent="custom_pc_builder.menu_custom_pc_builder" action="action_build"/>
+    </data>
+</odoo>
+```

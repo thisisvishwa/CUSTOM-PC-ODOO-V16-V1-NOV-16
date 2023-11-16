@@ -1,0 +1,54 @@
+```xml
+<odoo>
+    <data>
+        <record id="view_component_pricing_form" model="ir.ui.view">
+            <field name="name">component.pricing.form</field>
+            <field name="model">component.pricing</field>
+            <field name="arch" type="xml">
+                <form string="Component Pricing">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="category"/>
+                            <field name="configuration"/>
+                            <field name="customization"/>
+                            <field name="price"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_component_pricing_tree" model="ir.ui.view">
+            <field name="name">component.pricing.tree</field>
+            <field name="model">component.pricing</field>
+            <field name="arch" type="xml">
+                <tree string="Component Pricing">
+                    <field name="name"/>
+                    <field name="category"/>
+                    <field name="configuration"/>
+                    <field name="customization"/>
+                    <field name="price"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_component_pricing" model="ir.actions.act_window">
+            <field name="name">Component Pricing</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">component.pricing</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new Component Pricing
+                </p>
+                <p>
+                    Here you can manage the pricing of your components.
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="menu_component_pricing" name="Component Pricing" parent="custom_pc_builder.menu_custom_pc_builder" sequence="10" action="action_component_pricing"/>
+    </data>
+</odoo>
+```

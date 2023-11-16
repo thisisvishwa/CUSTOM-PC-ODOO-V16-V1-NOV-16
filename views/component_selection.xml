@@ -1,0 +1,53 @@
+```xml
+<odoo>
+    <data>
+        <record id="view_component_selection_form" model="ir.ui.view">
+            <field name="name">component.selection.form</field>
+            <field name="model">component.selection</field>
+            <field name="arch" type="xml">
+                <form string="Component Selection">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="category"/>
+                            <field name="configuration"/>
+                            <field name="customization"/>
+                            <field name="price"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_component_selection_tree" model="ir.ui.view">
+            <field name="name">component.selection.tree</field>
+            <field name="model">component.selection</field>
+            <field name="arch" type="xml">
+                <tree string="Component Selection">
+                    <field name="name"/>
+                    <field name="category"/>
+                    <field name="configuration"/>
+                    <field name="customization"/>
+                    <field name="price"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_component_selection" model="ir.actions.act_window">
+            <field name="name">Component Selection</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">component.selection</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new Component
+                </p><p>
+                    Here, you can create and manage your PC components.
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="menu_component_selection" name="Component Selection" parent="base.menu_custom" sequence="10" action="action_component_selection"/>
+    </data>
+</odoo>
+```

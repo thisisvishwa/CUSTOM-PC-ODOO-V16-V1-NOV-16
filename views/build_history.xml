@@ -1,0 +1,53 @@
+```xml
+<odoo>
+    <data>
+        <record id="view_build_history_form" model="ir.ui.view">
+            <field name="name">build.history.form</field>
+            <field name="model">build.history</field>
+            <field name="arch" type="xml">
+                <form string="Build History">
+                    <sheet>
+                        <group>
+                            <field name="user_id"/>
+                            <field name="components"/>
+                            <field name="configuration"/>
+                            <field name="customization"/>
+                            <field name="price"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_build_history_tree" model="ir.ui.view">
+            <field name="name">build.history.tree</field>
+            <field name="model">build.history</field>
+            <field name="arch" type="xml">
+                <tree string="Build History">
+                    <field name="user_id"/>
+                    <field name="components"/>
+                    <field name="configuration"/>
+                    <field name="customization"/>
+                    <field name="price"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_build_history" model="ir.actions.act_window">
+            <field name="name">Build History</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">build.history</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create your first Build History
+                </p><p>
+                    Add the user and the components used in the build.
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="menu_build_history" name="Build History" parent="custom_pc_builder.menu_custom_pc_builder" sequence="10" action="action_build_history"/>
+    </data>
+</odoo>
+```

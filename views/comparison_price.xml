@@ -1,0 +1,19 @@
+```xml
+<odoo>
+    <data>
+        <record id="view_product_comparison_price" model="ir.ui.view">
+            <field name="name">product.comparison.price</field>
+            <field name="model">product.template</field>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@class='oe_price']" position="after">
+                    <div class="oe_comparison_price" t-if="product.comparison_price">
+                        <del>
+                            <span t-esc="product.comparison_price" t-options='{"widget": "monetary", "display_currency": product.currency_id}'/>
+                        </del>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
+```

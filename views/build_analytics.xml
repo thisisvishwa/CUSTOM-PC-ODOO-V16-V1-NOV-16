@@ -1,0 +1,26 @@
+```xml
+<odoo>
+    <data>
+        <record id="view_build_analytics" model="ir.ui.view">
+            <field name="name">build.analytics.view</field>
+            <field name="model">build.analytics</field>
+            <field name="arch" type="xml">
+                <tree string="Build Analytics">
+                    <field name="most_popular_components"/>
+                    <field name="most_customized_components"/>
+                    <field name="most_expensive_builds"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_build_analytics" model="ir.actions.act_window">
+            <field name="name">Build Analytics</field>
+            <field name="res_model">build.analytics</field>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_build_analytics"/>
+        </record>
+
+        <menuitem id="menu_build_analytics" name="Build Analytics" parent="custom_pc_builder.main_menu" sequence="9" action="action_build_analytics"/>
+    </data>
+</odoo>
+```

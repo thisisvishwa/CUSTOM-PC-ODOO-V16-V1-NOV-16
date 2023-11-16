@@ -1,0 +1,50 @@
+```xml
+<odoo>
+    <data>
+        <record id="view_visibility_form" model="ir.ui.view">
+            <field name="name">visibility.form</field>
+            <field name="model">custom.pc.builder.visibility</field>
+            <field name="arch" type="xml">
+                <form string="Visibility">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="mobile_view"/>
+                            <field name="desktop_view"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_visibility_tree" model="ir.ui.view">
+            <field name="name">visibility.tree</field>
+            <field name="model">custom.pc.builder.visibility</field>
+            <field name="arch" type="xml">
+                <tree string="Visibility">
+                    <field name="name"/>
+                    <field name="mobile_view"/>
+                    <field name="desktop_view"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_visibility" model="ir.actions.act_window">
+            <field name="name">Visibility</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">custom.pc.builder.visibility</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new Visibility
+                </p>
+                <p>
+                    This will decide whether a building block should be displayed only on mobile, only on desktop, or both.
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="menu_visibility" name="Visibility" parent="custom_pc_builder.menu_custom_pc_builder" action="action_visibility"/>
+    </data>
+</odoo>
+```

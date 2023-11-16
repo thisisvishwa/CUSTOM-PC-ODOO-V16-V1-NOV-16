@@ -1,0 +1,28 @@
+```xml
+<odoo>
+    <data>
+        <!-- Top menu item -->
+        <record id="custom_pc_builder_menu" model="website.menu">
+            <field name="name">Custom PC Builder</field>
+            <field name="url">/custom_pc_builder</field>
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence" type="int">10</field>
+        </record>
+
+        <!-- Sub menu items -->
+        <record id="component_selection_menu" model="website.menu">
+            <field name="name">Component Selection</field>
+            <field name="url">/custom_pc_builder/component_selection</field>
+            <field name="parent_id" ref="custom_pc_builder_menu"/>
+        </record>
+
+        <record id="component_configuration_menu" model="website.menu">
+            <field name="name">Component Configuration</field>
+            <field name="url">/custom_pc_builder/component_configuration</field>
+            <field name="parent_id" ref="custom_pc_builder_menu"/>
+        </record>
+
+        <!-- Add more sub menu items as per the requirements -->
+    </data>
+</odoo>
+```

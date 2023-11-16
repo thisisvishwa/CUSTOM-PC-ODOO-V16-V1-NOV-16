@@ -1,0 +1,54 @@
+```xml
+<odoo>
+    <data>
+        <record id="view_component_configuration_form" model="ir.ui.view">
+            <field name="name">component.configuration.form</field>
+            <field name="model">component.configuration</field>
+            <field name="arch" type="xml">
+                <form string="Component Configuration">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="category"/>
+                            <field name="configuration"/>
+                            <field name="customization"/>
+                            <field name="price"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_component_configuration_tree" model="ir.ui.view">
+            <field name="name">component.configuration.tree</field>
+            <field name="model">component.configuration</field>
+            <field name="arch" type="xml">
+                <tree string="Component Configuration">
+                    <field name="name"/>
+                    <field name="category"/>
+                    <field name="configuration"/>
+                    <field name="customization"/>
+                    <field name="price"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_component_configuration" model="ir.actions.act_window">
+            <field name="name">Component Configuration</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">component.configuration</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create the first Component Configuration
+                </p>
+                <p>
+                    Click on create to start defining your component configuration.
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="menu_component_configuration" name="Component Configuration" parent="base.menu_custom" sequence="10" action="action_component_configuration"/>
+    </data>
+</odoo>
+```

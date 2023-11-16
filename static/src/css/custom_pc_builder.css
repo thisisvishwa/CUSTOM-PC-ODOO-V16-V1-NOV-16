@@ -1,0 +1,147 @@
+/* Custom PC Builder CSS */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Component Selection Page */
+.component-selection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.component-selection .component {
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+/* Component Configuration Page */
+.component-configuration {
+    display: flex;
+    flex-direction: column;
+}
+
+.component-configuration .configuration-option {
+    margin-bottom: 10px;
+}
+
+/* Component Customization Page */
+.component-customization {
+    display: flex;
+    flex-direction: column;
+}
+
+.component-customization .customization-option {
+    margin-bottom: 10px;
+}
+
+/* Component Pricing Page */
+.component-pricing {
+    display: flex;
+    justify-content: space-between;
+}
+
+.component-pricing .total-price {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Build History Page */
+.build-history {
+    display: flex;
+    flex-direction: column;
+}
+
+.build-history .build {
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+/* Build Recommendations Page */
+.build-recommendations {
+    display: flex;
+    flex-direction: column;
+}
+
+.build-recommendations .recommendation {
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+/* Build Sharing Page */
+.build-sharing {
+    display: flex;
+    justify-content: center;
+}
+
+.build-sharing .share-button {
+    margin: 20px;
+}
+
+/* Build Import/Export Page */
+.build-import-export {
+    display: flex;
+    justify-content: center;
+}
+
+.build-import-export .import-button,
+.build-import-export .export-button {
+    margin: 20px;
+}
+
+/* Build Analytics Page */
+.build-analytics {
+    display: flex;
+    flex-direction: column;
+}
+
+.build-analytics .analytics-chart {
+    margin-bottom: 20px;
+}
+
+/* Build Support Page */
+.build-support {
+    display: flex;
+    flex-direction: column;
+}
+
+.build-support .support-option {
+    margin-bottom: 10px;
+}
+
+/* Visibility: Mobile and Desktop view Page */
+@media screen and (max-width: 600px) {
+    .desktop-only {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 601px) {
+    .mobile-only {
+        display: none;
+    }
+}
+
+/* Comparison Price Page */
+.comparison-price {
+    text-decoration: line-through;
+}
+
+/* Prevent Sales of Zero Priced Products Page */
+.zero-priced-product {
+    display: none;
+}
+
+/* New Menu Page */
+.new-menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}

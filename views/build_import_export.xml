@@ -1,0 +1,35 @@
+```xml
+<odoo>
+    <data>
+        <record id="view_build_import_export_form" model="ir.ui.view">
+            <field name="name">build.import.export.form</field>
+            <field name="model">custom.pc.builder.build</field>
+            <field name="arch" type="xml">
+                <form string="Build Import/Export">
+                    <sheet>
+                        <group>
+                            <field name="import_file" widget="binary"/>
+                            <field name="export_file" widget="binary"/>
+                        </group>
+                        <footer>
+                            <button name="import_build" string="Import" type="object" class="btn-primary"/>
+                            <button name="export_build" string="Export" type="object" class="btn-primary"/>
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_build_import_export" model="ir.actions.act_window">
+            <field name="name">Build Import/Export</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">custom.pc.builder.build</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_build_import_export_form"/>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="menu_build_import_export" name="Build Import/Export" parent="custom_pc_builder.main_menu" action="action_build_import_export"/>
+    </data>
+</odoo>
+```

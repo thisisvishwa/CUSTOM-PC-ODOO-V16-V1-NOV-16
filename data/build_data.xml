@@ -1,0 +1,21 @@
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Sample Build Data -->
+        <record id="build_1" model="custom.pc.builder.build">
+            <field name="user_id">1</field>
+            <field name="components">CPU: Intel Core i7, GPU: Nvidia RTX 3080, RAM: 16GB DDR4, Storage: 1TB SSD, Power Supply: 750W</field>
+            <field name="configuration">CPU: 3.6GHz, GPU: 10GB GDDR6X, RAM: 3200MHz, Storage: NVMe, Power Supply: 80 Plus Gold</field>
+            <field name="customization">CPU: Black, GPU: RGB, RAM: RGB, Storage: Black, Power Supply: Black</field>
+            <field name="price">2000</field>
+            <field name="build_history">First Build</field>
+            <field name="build_recommendations">Gaming PC</field>
+            <field name="build_sharing">Shared</field>
+            <field name="build_import_export">Exported</field>
+            <field name="build_analytics">Most Popular</field>
+            <field name="build_support">Warranty: 2 Years</field>
+        </record>
+    </data>
+</odoo>
+```

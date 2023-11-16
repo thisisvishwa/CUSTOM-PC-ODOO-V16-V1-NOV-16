@@ -1,0 +1,45 @@
+```xml
+<odoo>
+    <data>
+        <!-- Component Selection Template -->
+        <template id="component_selection_template">
+            <div class="component-selection">
+                <h2>Select Your Components</h2>
+                <div class="component-list">
+                    <!-- Component list will be dynamically populated -->
+                </div>
+            </div>
+        </template>
+
+        <!-- Component Configuration Template -->
+        <template id="component_configuration_template">
+            <div class="component-configuration">
+                <h2>Configure Your Components</h2>
+                <div class="configuration-form">
+                    <!-- Configuration form will be dynamically populated -->
+                </div>
+            </div>
+        </template>
+
+        <!-- Component Customization Template -->
+        <template id="component_customization_template">
+            <div class="component-customization">
+                <h2>Customize Your Components</h2>
+                <div class="customization-form">
+                    <!-- Customization form will be dynamically populated -->
+                </div>
+            </div>
+        </template>
+
+        <!-- Component Pricing Template -->
+        <template id="component_pricing_template">
+            <div class="component-pricing">
+                <h2>Your Build Price</h2>
+                <div class="pricing-details">
+                    <!-- Pricing details will be dynamically populated -->
+                </div>
+            </div>
+        </template>
+    </data>
+</odoo>
+```
